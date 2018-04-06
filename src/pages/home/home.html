@@ -1,0 +1,35 @@
+<style>
+  .login {
+    background-color: #cfe1fc;
+    background-image: url(../assets/imgs/bgPattern.jpg);
+    background-repeat: repeat;
+  }
+</style>
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="login">
+
+  <form (ngSubmit)="app42Login()" name="loginForm">
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="login.username" name="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="login.password" name="password"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Login</button>
+  </form>
+
+
+
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
+</ion-content>

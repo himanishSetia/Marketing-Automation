@@ -1,0 +1,151 @@
+<style>
+  .ionRow {
+    box-shadow: 0px 0px 12px #b2b2b2;
+    border: 1px solid #cac9c9;
+  }
+
+
+
+  .ionColNew{
+    box-shadow: 0px 0px 12px #b2b2b2;
+    border: 1px solid #cac9c9;
+    margin: 6px;
+    background-color: #588ebd;
+  }
+  .ionColReturn{
+    box-shadow: 0px 0px 12px #b2b2b2;
+    border: 1px solid #cac9c9;
+    margin: 6px;
+    background-color: #e35b5b;
+  }
+  .ionColTotal{
+    box-shadow: 0px 0px 12px #b2b2b2;
+    border: 1px solid #cac9c9;
+    margin: 6px;
+    background-color: #44b6ae;
+  }
+  .ionColAvg{
+    box-shadow: 0px 0px 12px #b2b2b2;
+    border: 1px solid #cac9c9;
+    margin: 6px;
+    background-color: #8775a7;
+  }
+
+  .newUsers {
+    background-image: url(../../assets/icon/new_users.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .newUsers p {
+    background-repeat: no-repeat;
+  }
+
+  .returningUsers p {
+    background-repeat: no-repeat;
+  }
+
+  .totalUsers p {
+    background-repeat: no-repeat;
+  }
+  .avgSession p {
+    background-repeat: no-repeat;
+  }
+
+  .returningUsers {
+    background-image: url(../../assets/icon/returning_users.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .totalUsers {
+    background-image: url(../../assets/icon/total_user.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .avgSession {
+    background-image: url(../../assets/icon/session_time.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .col font{font-size: 20px;
+    font-weight: bold;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+    .col p{font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;}
+    .trendingEvents{}
+    .trendingRow{box-shadow: 0px 0px 12px #b2b2b2;
+    height: 240px;
+    margin-top: 15px;}
+
+    .shadow{
+      box-shadow: 0px 0px 12px #b2b2b2;
+    }
+</style>
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row class="ionRow">
+      
+      <ion-col class="ionColNew">
+        <div class="col newUsers">
+          <font>25</font>
+          <p>New Users</p>
+        </div>
+      </ion-col>
+      <ion-col class="ionColReturn">
+        <div class="col returningUsers">
+          <font>32</font>
+          <p>Returning Users</p>
+        </div>
+      </ion-col>
+      <ion-col class="ionColTotal">
+        <div class="col totalUsers">
+          <font>57</font>
+          <p>Total Users</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="ionColAvg">
+          <div class="col avgSession">
+            <font>25</font>
+            <p>Avg session time</p>
+          </div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+  <ion-row class="trendingRow">
+    <ion-col col-12>
+      <ion-title>Today's Trending Events</ion-title>
+    </ion-col>
+    <ion-col col-10 offset-1>
+    <!-- <ion-col col-12 offset-5 class="shadow">CHECKOUT</ion-col>
+    <ion-col col-12 offset-5 class="shadow">PAYMENT</ion-col>
+    <ion-col col-12 offset-5 class="shadow">APPSESSION-START</ion-col>
+    <ion-col col-12 offset-5 class="shadow">INSTALL</ion-col>
+    <ion-col col-12 offset-5 class="shadow">UNINSTALL</ion-col> -->
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-card>
+  <ion-card-header>
+    Doughnut Graph
+  </ion-card-header>
+
+  <ion-card-content>
+    <canvas #doughnutGraph></canvas>
+  </ion-card-content>
+</ion-card>
+</ion-content>
